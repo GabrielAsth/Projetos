@@ -1,5 +1,3 @@
-## Site
-
 Coloquei os meus projetos em um site para apresenta-los melhor.
 <!DOCTYPE html>
 <html lang="pt-br">
