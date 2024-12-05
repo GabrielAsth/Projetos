@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <link rel="shortcut icon" href="./icons/icons-g50.png">  
+   <link rel="stylesheet" href="./css/index.css">
+   
+   <!--swiper css-->
+   <link  rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+   <link rel="stylesheet" href="./css/swiper.css">
+
+   <title>Gabflix</title>
+</head>
+<body>
+
+   <header class="header-index" id="header">
+      <div class="header-index--left">
+         <div>
+            <h2 class="header__logo header__logo--md" id="logo">Gabflix</h2>
+            <ul class="actions">
+               <li><a href="index.html" class="header__logo header__logo--md">Bussinger</a></li>
+            </ul>
+         </div>
+         <div class="nav-btn" id="btn-mobile">
+            Navegar <i class="fas fa-caret-down" id="icon-menu"></i>
+         </div>
+         <nav id="nav">
+            <a class="nav__link" href="#" >Início</a>
+            <a class="nav__link" href="#">Filmes</a>
+            <a class="nav__link" href="#">Curtas</a>
+            <a class="nav__link" href="#">Documentários</a>
+            <a class="nav__link" href="#">Minha lista</a>
+         </nav>
+      </div>
+      <div class="header-index--right">
+         <div class="search-container">
+            <i class="fas fa-search" id="lupa"></i>
+            <input class="search__input" id="search" type="text" placeholder="Títulos, gente e gêneros">
+            <i class="fas fa-times" id="fechar"></i>
+         </div>
+         <div class="bell-container">
+            <i class="fas fa-bell" id="sino"></i>
+         </div>
+         <div class="user-container">
+            <div class="avatar-container" id="avatar"><img class="avatar__image" src="./images/avatar.jpg"></div>
+            <nav class="menu" id="menu">
+               <div class="menu-container menu-container--top menu-avatar">
+                  <div class="user-avatar">
+                     <div class="avatar-container"><img class="avatar__image" src="./images/avatar.jpg"></div>
+                     <a class="nav__link" href="#" >User 1</a>
+                  </div>
+                  <div class="user-avatar">
+                     <div class="avatar-container"><img class="avatar__image" src="./images/avatar.jpg"></div>
+                     <a class="nav__link" href="#" >User 2</a>
+                  </div>
+                  <div class="user-avatar">
+                     <div class="avatar-container"><img class="avatar__image" src="./images/avatar.jpg"></div>
+                     <a class="nav__link" href="#" >User 3</a>
+                  </div>
+               </div>
+               <hr>
+               <div class="menu-container menu-container--bottom menu-options">
+                  <a class="nav__link" href="#">Gerenciar perfis</a>
+                  <ac lass="nav__link" href="#" id="logOut">Sair do Gabflix</a>
+               </div>
+            </nav>
+         </div>
+      </div>
+   </header>
+
+   <main class="main main-index">
+            <div class="title">
+               <h1 class="main__title">Meu Amigo Totoro</h1>
+            </div>
+            <div class="text">
+               <p class=" main__text">
+                  Mei é uma jovem que encontra uma pequena passagem em seu quintal, 
+                  que a leva à um lendário espírito da floresta conhecido como Totoro. Sua mãe 
+                  está no hospital e seu pai divide o tempo entre dar aulas na faculdade e cuidar de
+                   sua mulher doente. Quando Mei tenta visitar a mãe por conta própria, se perde na floresta 
+                   e só o grande e fofo Totoro pode ajudar a menina a achar o caminho de volta para casa.
+               </p>
+            </div>
+            <div class="buttons">
+               <button role="button" class="btn btn-index btn--light"><i class="fas fa-play"></i>
+               Assistir
+               </button>
+               <button role="button" class="btn btn-index btn--dark"><i class="fas fa-info-circle"></i>
+               Mais informações
+               </button>
+            </div>
+   </main>
+   
+   <!-- Movies -->
+   <section class="movies">
+      <header>
+         <div class="title-container">
+            <h2 class="movie__ttitle">Populares no Gabflix</h2>
+         </div>
+         <div class=" text-container">
+            <p class="movie__text">Ver tudo <i class="fas fa-angle-right"></i></p>
+         </div>
+      </header>
+      <!--swiper JS-->
+      <main class="swiper mySwiper">
+         <div class="swiper-wrapper">
+            <div class="overlay"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-01.jpg"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-02.jpg"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-03.jpg"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-04.jpg"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-05.jpg"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-06.jpg"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-07.jpg"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-08.jpg"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-09.jpg"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-10.jpg"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-11.jpg"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-12.jpg"></div>
+         </div>
+         <div class="swiper-pagination"></div>
+         <div class="swiper-button-next"></div>
+         <div class="swiper-button-prev"></div>
+      </main>
+   </section>
+
+   <section class="movies">
+      <header>
+         <div class="title-container">
+            <h2 class="movie__ttitle">Em Alta</h2>
+         </div>
+         <div class=" text-container">
+            <p class="movie__text">Ver tudo <i class="fas fa-angle-right"></i></p>
+         </div>
+      </header>
+      <!--swiper JS-->
+      <main class="swiper mySwiper">
+         <div class="swiper-wrapper">
+            <div class="overlay"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-13.jpg"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-14.jpg"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-15.jpg"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-16.jpg"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-17.jpg"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-18.jpg"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-19.jpg"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-20.jpg"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-21.jpg"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-22.jpg"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-23.jpg"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-24.jpg"></div>
+         </div>
+         <div class="swiper-pagination"></div>
+         <div class="swiper-button-next"></div>
+         <div class="swiper-button-prev"></div>
+      </main>
+   </section>
+
+   <section class="movies">
+      <header>
+         <div class="title-container">
+            <h2 class="movie__ttitle">Curtas</h2>
+         </div>
+         <div class=" text-container">
+            <p class="movie__text">Ver tudo <i class="fas fa-angle-right"></i></p>
+         </div>
+      </header>
+      <!--swiper JS-->
+      <main class="swiper mySwiper">
+         <div class="swiper-wrapper">
+            <div class="overlay"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-01.jpg"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-02.jpg"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-03.jpg"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-04.jpg"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-05.jpg"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-06.jpg"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-07.jpg"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-08.jpg"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-09.jpg"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-10.jpg"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-11.jpg"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-12.jpg"></div>
+         </div>
+         <div class="swiper-pagination"></div>
+         <div class="swiper-button-next"></div>
+         <div class="swiper-button-prev"></div>
+      </main>
+   </section>
+
+   <section class="movies">
+      <header>
+         <div class="title-container">
+            <h2 class="movie__ttitle">Documentários</h2>
+         </div>
+         <div class=" text-container">
+            <p class="movie__text">Ver tudo <i class="fas fa-angle-right"></i></p>
+         </div>
+      </header>
+      <!--swiper JS-->
+      <main class="swiper mySwiper">
+         <div class="swiper-wrapper">
+            <div class="overlay"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-13.jpg"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-14.jpg"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-15.jpg"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-16.jpg"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-17.jpg"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-18.jpg"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-19.jpg"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-20.jpg"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-21.jpg"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-22.jpg"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-23.jpg"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-24.jpg"></div>
+         </div>
+         <div class="swiper-pagination"></div>
+         <div class="swiper-button-next"></div>
+         <div class="swiper-button-prev"></div>
+      </main>
+   </section>
+   
+   <!--rodapé-->
+   <footer class="footer">
+      <div class="social-links">
+         <a class="footer__link" href="#"><i class="fab fa-facebook-square"></i></a>
+         <a class="footer__link" href="#"><i class="fab fa-instagram-square"></i></a>
+         <a class="footer__link" href="#"><i class="fab fa-twitter"></i></a>
+         <a class="footer__link" href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+      <ul class="options-links">
+         <li class="footer__item">Indioma e legendas</li>
+         <li class="footer__item">Imprensa</li>
+         <li class="footer__item">Privacidade</li>
+         <li class="footer__item">Entre em contato</li>
+         <li class="footer__item">Audiodescrição</li>
+         <li class="footer__item">Avisos legais</li>
+         <li class="footer__item">Centro de ajuda</li>
+         <li class="footer__item">Carreiras</li>
+         <li class="footer__item">Preferências de cookies</li>
+         <li class="footer__item">Cartão pré-pago</li>
+         <li class="footer__item">Temos de uso</li>
+         <li class="footer__item">informações corporativas</li>
+      </ul>
+      <div class="copy">
+         © Gabflix.
+      </div>
+   </footer>
+   
+
+   <script src="https://kit.fontawesome.com/a516c8499c.js" crossorigin="anonymous"></script>
+   <script src="./js/index.js"></script>
+   <!--swiper JS-->
+   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+   <script src="./js/swiper.js"></script>
+</body>
+</html>
