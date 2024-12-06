@@ -1,0 +1,22 @@
+.footer__item{
+   width: 25%;
+   margin-bottom: 10px;
+
+   color: gray;
+   font-size: 13px;
+   font-weight: 500;
+}
+
+
+/*responsive*/
+@media screen and (max-width:580px){
+   .footer__item{
+      width: 33%;
+   }
+}
+
+@media screen and (max-width:420px){
+   .options-links li{
+      width: 50%;
+   }
+}

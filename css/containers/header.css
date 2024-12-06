@@ -1,0 +1,157 @@
+
+.header--background{
+   background: linear-gradient(180deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.315) 48.83%, rgba(0, 0, 0, 0.9) 100%), url(../../images/background.jpg);
+   background-size:cover;
+   background-position: center;
+
+   width: 100%;
+   height: auto;
+
+   border-bottom: 8px solid #222222;
+}
+
+.header-home {
+   display: flex;
+   padding: 50px 58px;
+   justify-content: space-around;
+}
+
+
+.btn-group{
+   width: 30%;
+}
+
+.select-group{
+   position: relative;
+   display: inline-block;
+ } 
+
+
+.header-index{
+   display:flex;
+   padding: 0 5%;
+   
+   width: 100%;
+   position: fixed;
+   z-index: 1000;
+}
+
+.header-index--left{
+   width: 60%;
+   display: flex;
+   align-items: center;
+}
+
+.header-index--right{
+   width: 40%;
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+}
+
+.bell-container{
+   margin: 0 30px;
+}
+
+.user-container{
+   width: 40px;
+   height: 40px;
+   cursor: pointer;
+}
+
+
+.search-container{
+   display: flex;
+   align-items: center;
+   position: relative;
+   height: 100%;
+}
+
+
+.header-content{
+   width: 50%;
+   
+   display: flex;
+   justify-content: flex-end;
+   
+}
+.select-group {
+   margin-right: 20px;
+}
+
+
+/*responsive*/
+@media screen and (max-width:980px){
+   .header-index--left{
+      width:40%;
+   }
+   .header-index--right{
+      width:60%
+   }
+      
+}
+
+@media screen and (max-width:800px) {
+   .btn-group{
+      width: 80%;
+      margin: 0 auto;
+   }
+}
+
+
+@media screen and (max-width:660px){
+   .header-index{
+      padding: 0 10px;
+   }
+
+   .header-index--left{
+      min-width: 240px;
+   }
+}
+
+
+@media screen and (max-width:560px) {
+   .select-group{
+      margin-right: 0;
+      
+      width: 50%;
+      margin: 50px 0 20px 25%;
+   }
+
+   .header-home {
+      flex-direction: column;
+      align-content: center;
+   }
+
+   
+   .header-content{
+      width: 100%;
+      flex-direction: column;
+   }
+
+}
+
+@media screen and (max-width:480px) {
+   .btn-group{
+      width: 100%;
+   }  
+}
+
+
+@media screen and (max-width:400px){
+   .header-index{
+      flex-direction: column;
+   }
+
+   .header-index--left{
+      width: 100%;
+      flex-direction: column;
+      padding-bottom: 10px;
+   }
+
+   .header-index--right{
+      align-self: flex-end;
+      position: absolute;
+      top: 50%;
+   }
+}

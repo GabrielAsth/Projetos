@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+:root{
+  --vermelho: #E50914;
+  --preto: #141414;
+  --branco: rgba(255, 255, 255, 0.952);
+  --cinza: #AAA;
+}
+
+body {
+   background: black;
+   font-family: 'Open Sans', sans-serif;
+   color: var(--branco);
+}
+
+

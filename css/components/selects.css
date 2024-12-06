@@ -1,0 +1,64 @@
+.select{
+   appearance: none;
+   
+   height: 36px;
+
+   width: 112px;
+   color: #fff;
+
+   border: 1px solid rgba(255, 255, 255, 0.6);
+   border-radius: 2px;
+   background: transparent;
+
+   font-style: normal;
+   font-weight: normal;
+   font-size: 14px;
+   line-height: 19px;
+
+   text-align-last: center;
+   cursor: pointer;
+}
+
+.select-home:focus {
+   outline: 1px solid #3c9df7;
+ }
+
+.select__option{
+   color: #fff;
+   background: rgba(128, 128, 128, 1);
+}
+
+.select__icon--left{
+   left: 5%;
+ }
+
+.select__icon--right{
+   right: 5%;
+}
+
+.select__icon{
+   position: absolute;
+   top: 10px;
+}
+
+
+/*responsive*/
+@media screen and (max-width:560px) {
+
+   .select{
+      width: 100%;
+   }
+}
+
+@media screen and (max-width:480px) {
+   .select{
+      width: 100%;
+    }
+    .select-group .fa-globe{
+      left: 2%;
+    }
+   
+   .select-group .fa-sort-down{
+      right: 2%;
+   }
+}

@@ -1,0 +1,23 @@
+/*global*/
+@import url(./reset.css);
+@import url(./global.css);
+
+
+/*components*/
+@import url(./components/buttons.css);
+@import url(./components/inputs.css);
+@import url(./components/items.css);
+@import url(./components/links.css);
+@import url(./components/selects.css);
+@import url(./components/texts.css);
+@import url(./components/titles.css);
+
+
+/*containers*/
+@import url(./containers/header.css);
+@import url(./containers/main.css);
+@import url(./containers/card.css);
+@import url(./containers/footer.css);
+
+
+
