@@ -6,57 +6,58 @@
 
 // Import modules
 import navigationManager from './navigation.js';
-import animationManager from './animations.js';
+import animationManager from './animation.js';
 
 // Main App Class
 class App {
 	constructor() {
-		this.initialize();
+		this.init();
 	}
 
-	initialize() {
-		// Initialize when DOM is loaded
+	init() {
+		// Inicializar quando o DOM estiver pronto
 		document.addEventListener('DOMContentLoaded', () => {
+			this.initNavigation();
+			this.initAnimations();
 			this.setupEventListeners();
-			this.initializeModules();
 		});
 	}
 
+	initNavigation() {
+		// NavigationManager já é inicializado automaticamente
+		console.log('Navegação inicializada');
+	}
+
+	initAnimations() {
+		// Inicializar animações
+		animationManager.init();
+	}
+
 	setupEventListeners() {
-		// Window resize handler
+		// Eventos de redimensionamento
 		window.addEventListener('resize', () => {
 			this.handleResize();
 		});
 
-		// Scroll handler
+		// Eventos de rolagem
 		window.addEventListener('scroll', () => {
 			this.handleScroll();
 		});
 	}
 
-	initializeModules() {
-		// Initialize navigation
-		navigationManager.updateActiveMenuItem();
-
-		// Initialize animations
-		animationManager.initialize();
-	}
-
 	handleResize() {
-		// Handle responsive behavior
-		if (window.innerWidth > 768) {
-			document.querySelector('#nav').classList.remove('active');
-		}
+		// Atualizar elementos responsivos
+		animationManager.updateResponsive();
 	}
 
 	handleScroll() {
-		// Handle scroll-based animations
-		animationManager.handleScroll();
+		// Atualizar animações baseadas em scroll
+		animationManager.updateScrollAnimations();
 	}
 }
 
-// Initialize App
-const app = new App();
+// Inicializar a aplicação
+window.app = new App();
 
 (function($) {
 
@@ -87,34 +88,34 @@ const app = new App();
 		});
 
 	// Nav.
+
 		// Title Bar.
-		$(
-			'<div id="titleBar">' +
-				'<a href="#navPanel" class="toggle"></a>' +
-			'</div>'
-		)
-			.appendTo($body);
+			$(
+				'<div id="titleBar">' +
+					'<a href="#navPanel" class="toggle"></a>' +
+					'<span class="title">' + $('#logo h1').html() + '</span>' +
+				'</div>'
+			)
+				.appendTo($body);
 
 		// Panel.
-		$(
-			'<div id="navPanel">' +
-				'<nav>' +
-					$('#nav').navList() +
-				'</nav>' +
-			'</div>'
-		)
-			.appendTo($body)
-			.panel({
-				delay: 500,
-				hideOnClick: true,
-				hideOnSwipe: true,
-				resetScroll: true,
-				resetForms: true,
-				side: 'left',
-				target: $body,
-				visibleClass: 'navPanel-visible'
-			});
+			$(
+				'<div id="navPanel">' +
+					'<nav>' +
+						$('#nav').navList() +
+					'</nav>' +
+				'</div>'
+			)
+				.appendTo($body)
+				.panel({
+					delay: 500,
+					hideOnClick: true,
+					hideOnSwipe: true,
+					resetScroll: true,
+					resetForms: true,
+					side: 'left',
+					target: $body,
+					visibleClass: 'navPanel-visible'
+				});
 
 })(jQuery);
-
-// Fim do arquivo

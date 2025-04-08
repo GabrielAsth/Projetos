@@ -2,45 +2,65 @@
 class NavigationManager {
     constructor() {
         this.nav = document.querySelector('#nav');
-        this.menuItems = document.querySelectorAll('#nav ul li');
-        this.initialize();
+        this.titleBar = document.querySelector('#titleBar');
+        this.toggle = document.querySelector('#titleBar .toggle');
+        this.body = document.body;
+        this.init();
     }
 
-    initialize() {
-        // Initialize navigation when DOM is loaded
-        document.addEventListener('DOMContentLoaded', () => {
-            this.setupMobileMenu();
-            this.setupDropdowns();
-            this.setupSmoothScroll();
-            this.setupProjectNavigation();
-        });
+    init() {
+        this.setupMobileMenu();
+        this.setupDropdowns();
+        this.setupSmoothScroll();
+        this.setupActiveItems();
     }
 
     setupMobileMenu() {
-        const menuToggle = document.createElement('button');
-        menuToggle.classList.add('menu-toggle');
-        menuToggle.innerHTML = '<span></span><span></span><span></span>';
-        
-        menuToggle.addEventListener('click', () => {
-            this.nav.classList.toggle('active');
-            menuToggle.classList.toggle('active');
+        // Toggle do menu
+        this.toggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            this.toggleMobileMenu();
         });
 
-        this.nav.parentElement.insertBefore(menuToggle, this.nav);
+        // Fechar ao clicar fora
+        document.addEventListener('click', (e) => {
+            if (this.body.classList.contains('navPanel-visible')) {
+                if (!this.nav.contains(e.target) && !this.toggle.contains(e.target)) {
+                    this.closeMobileMenu();
+                }
+            }
+        });
+
+        // Fechar ao redimensionar
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                this.closeMobileMenu();
+            }
+        });
     }
 
     setupDropdowns() {
-        const dropdowns = document.querySelectorAll('#nav ul li ul');
-        
+        const dropdowns = document.querySelectorAll('#nav ul li:has(> ul)');
         dropdowns.forEach(dropdown => {
-            const parent = dropdown.parentElement;
-            
-            parent.addEventListener('mouseenter', () => {
-                dropdown.style.display = 'block';
+            dropdown.addEventListener('mouseenter', () => {
+                if (window.innerWidth > 768) {
+                    dropdown.classList.add('hover');
+                }
             });
 
-            parent.addEventListener('mouseleave', () => {
-                dropdown.style.display = 'none';
+            dropdown.addEventListener('mouseleave', () => {
+                if (window.innerWidth > 768) {
+                    dropdown.classList.remove('hover');
+                }
+            });
+
+            dropdown.addEventListener('click', (e) => {
+                if (window.innerWidth <= 768) {
+                    if (e.target === dropdown || e.target === dropdown.querySelector('a')) {
+                        e.preventDefault();
+                        dropdown.classList.toggle('active');
+                    }
+                }
             });
         });
     }
@@ -49,52 +69,52 @@ class NavigationManager {
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', (e) => {
                 e.preventDefault();
-                
-                const targetId = anchor.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    targetElement.scrollIntoView({
+                const target = document.querySelector(anchor.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
                         behavior: 'smooth',
                         block: 'start'
                     });
+                    this.closeMobileMenu();
                 }
             });
         });
     }
 
-    setupProjectNavigation() {
-        // Setup "Voltar aos Projetos" button in project pages
-        const backToProjectsBtn = document.querySelector('.button.style2[href="index.html#highlights"]');
-        if (backToProjectsBtn) {
-            backToProjectsBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                // Usar setTimeout para garantir que outros event listeners não interfiram
-                setTimeout(() => {
-                    window.location.href = 'index.html#highlights';
-                }, 50);
+    setupActiveItems() {
+        const navItems = document.querySelectorAll('#nav a');
+        const updateActive = () => {
+            const currentPath = window.location.pathname;
+            navItems.forEach(item => {
+                if (item.getAttribute('href') === currentPath) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
             });
-        }
+        };
+
+        updateActive();
+        window.addEventListener('popstate', updateActive);
     }
 
-    // Update active menu item
-    updateActiveMenuItem() {
-        const currentPath = window.location.pathname;
-        
-        this.menuItems.forEach(item => {
-            const link = item.querySelector('a');
-            if (link && link.getAttribute('href') === currentPath) {
-                item.classList.add('active');
-            } else {
-                item.classList.remove('active');
-            }
-        });
+    toggleMobileMenu() {
+        this.nav.classList.toggle('active');
+        this.titleBar.classList.toggle('active');
+        this.body.classList.toggle('navPanel-visible');
+    }
+
+    closeMobileMenu() {
+        this.nav.classList.remove('active');
+        this.titleBar.classList.remove('active');
+        this.body.classList.remove('navPanel-visible');
     }
 }
 
-// Initialize Navigation Manager
-const navigationManager = new NavigationManager();
+// Inicializar quando o DOM estiver pronto
+document.addEventListener('DOMContentLoaded', () => {
+    window.navigationManager = new NavigationManager();
+});
 
 // Export for use in other files
-export default navigationManager; 
+export default window.navigationManager; 
