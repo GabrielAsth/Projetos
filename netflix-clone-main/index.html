@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="Gabflix - Uma plataforma de streaming inspirada na Netflix, focada em filmes do Studio Ghibli">
+   <meta name="keywords" content="Gabflix, Studio Ghibli, streaming, anime, Totoro, filmes de animação">
+   <meta name="author" content="Gabriel Bussinger">
+
+   <link rel="shortcut icon" href="./icons/icons-g50.png">  
+   <link rel="stylesheet" href="./css/index.css">
+   
+   <!--swiper css-->
+   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+   <link rel="stylesheet" href="./css/swiper.css">
+
+   <title>Gabflix - Streaming de Filmes do Studio Ghibli</title>
+</head>
+<body>
+   <header class="header-index" id="header" role="banner">
+      <div class="header-index--left">
+         <div>
+            <h2 class="header__logo header__logo--md" id="logo">Gabflix</h2>
+         </div>
+         <div class="nav-btn" id="btn-mobile" aria-label="Menu de navegação">
+            <span>Navegar</span> <i class="fas fa-caret-down" id="icon-menu"></i>
+         </div>
+         <nav id="nav" role="navigation">
+            <a class="nav__link" href="#header" aria-current="page">Início</a>
+            <a class="nav__link" href="#filmes">Filmes</a>
+            <a class="nav__link" href="#curtas">Curtas</a>
+            <a class="nav__link" href="#documentarios">Documentários</a>
+            <a class="nav__link" href="#minha-lista">Minha lista</a>
+            <a class="nav__link portfolio-link" href="../index.html#highlights" onclick="return false;" onmousedown="window.location.href='../index.html#highlights'; return false;" aria-label="Voltar ao portfólio"><i class="fas fa-arrow-left"></i> Voltar ao Portfólio</a>
+         </nav>
+      </div>
+      <div class="header-index--right">
+         <div class="search-container">
+            <i class="fas fa-search" id="lupa" aria-hidden="true"></i>
+            <input class="search__input" id="search" type="text" placeholder="Títulos, gente e gêneros" aria-label="Buscar filmes">
+            <i class="fas fa-times" id="fechar" aria-label="Limpar busca"></i>
+         </div>
+         <div class="bell-container">
+            <i class="fas fa-bell" id="sino" aria-label="Notificações"></i>
+         </div>
+         <div class="user-container">
+            <div class="avatar-wrapper">
+                <img class="avatar__image" src="./images/avatar.jpg" alt="Avatar do usuário" id="avatar">
+                <i class="fas fa-caret-down"></i>
+            </div>
+            <div class="menu" id="menu">
+                <div class="menu-container menu-profiles">
+                    <a class="profile-link" href="#">
+                        <img class="avatar__image" src="./images/avatar.jpg" alt="Perfil do Usuário 1">
+                        <span>USER 1</span>
+                    </a>
+                    <a class="profile-link" href="#">
+                        <img class="avatar__image" src="./images/avatar.jpg" alt="Perfil do Usuário 2">
+                        <span>USER 2</span>
+                    </a>
+                    <a class="profile-link" href="#">
+                        <img class="avatar__image" src="./images/avatar.jpg" alt="Perfil do Usuário 3">
+                        <span>USER 3</span>
+                    </a>
+                    <a class="profile-link" href="#">
+                        <img class="avatar__image" src="./images/avatar.jpg" alt="Perfil Infantil">
+                        <span>USER 4</span>
+                    </a>
+                </div>
+                <hr>
+                <div class="menu-container menu-options">
+                    <a class="nav__link" href="#"><i class="fas fa-pencil-alt"></i> Gerenciar perfis</a>
+                    <a class="nav__link" href="#"><i class="fas fa-exchange-alt"></i> Transferir perfil</a>
+                    <a class="nav__link" href="#"><i class="fas fa-user"></i> Conta</a>
+                    <a class="nav__link" href="#"><i class="fas fa-question-circle"></i> Central de Ajuda</a>
+                </div>
+                <hr>
+                <div class="menu-container">
+                    <a class="nav__link" href="#" id="logOut"><i class="fas fa-sign-out-alt"></i> Sair do Gabflix</a>
+                </div>
+            </div>
+         </div>
+      </div>
+   </header>
+
+   <main class="main main-index" role="main">
+      <div class="title">
+         <h1 class="main__title">Meu Amigo Totoro</h1>
+      </div>
+      <div class="text">
+         <p class="main__text">
+            Mei é uma jovem que encontra uma pequena passagem em seu quintal, que a leva à um lendário espírito da floresta conhecido como Totoro. Sua mãe está no hospital e seu pai divide o tempo entre dar aulas na faculdade e cuidar de sua mulher doente. Quando Mei tenta visitar a mãe por conta própria, se perde na floresta e só o grande e fofo Totoro pode ajudar a menina a achar o caminho de volta para casa.
+         </p>
+      </div>
+      <div class="buttons">
+         <button class="btn btn-index btn--light">
+            <i class="fas fa-play"></i>Assistir
+         </button>
+         <button class="btn btn-index btn--dark">
+            <i class="fas fa-info-circle"></i>Mais informações
+         </button>
+      </div>
+   </main>
+   
+   <!-- Movies -->
+   <section class="movies" id="filmes">
+      <header>
+         <div class="title-container">
+            <h2 class="movie__ttitle">Populares no Gabflix</h2>
+         </div>
+         <div class="text-container">
+            <p class="movie__text">Ver tudo <i class="fas fa-angle-right"></i></p>
+         </div>
+      </header>
+      <!--swiper JS-->
+      <main class="swiper mySwiper">
+         <div class="swiper-wrapper">
+            <div class="overlay"></div>
+            <div class="swiper-slide" data-title="A Viagem de Chihiro"><img src="./images/movies/mini-01.jpg"></div>
+            <div class="swiper-slide" data-title="Meu Amigo Totoro"><img src="./images/movies/mini-02.jpg"></div>
+            <div class="swiper-slide" data-title="O Castelo Animado"><img src="./images/movies/mini-03.jpg"></div>
+            <div class="swiper-slide" data-title="Princesa Mononoke"><img src="./images/movies/mini-04.jpg"></div>
+            <div class="swiper-slide" data-title="Ponyo"><img src="./images/movies/mini-05.jpg"></div>
+            <div class="swiper-slide" data-title="O Serviço de Entregas da Kiki"><img src="./images/movies/mini-06.jpg"></div>
+            <div class="swiper-slide" data-title="O Mundo dos Pequeninos"><img src="./images/movies/mini-07.jpg"></div>
+            <div class="swiper-slide" data-title="O Conto da Princesa Kaguya"><img src="./images/movies/mini-08.jpg"></div>
+            <div class="swiper-slide" data-title="O Túmulo dos Vagalumes"><img src="./images/movies/mini-09.jpg"></div>
+            <div class="swiper-slide" data-title="O Reino dos Gatos"><img src="./images/movies/mini-10.jpg"></div>
+            <div class="swiper-slide" data-title="O Castelo no Céu"><img src="./images/movies/mini-11.jpg"></div>
+            <div class="swiper-slide" data-title="Nausicaä do Vale do Vento"><img src="./images/movies/mini-12.jpg"></div>
+         </div>
+         <div class="swiper-pagination"></div>
+         <div class="swiper-button-next"></div>
+         <div class="swiper-button-prev"></div>
+      </main>
+   </section>
+
+   <section class="movies" id="em-alta">
+      <header>
+         <div class="title-container">
+            <h2 class="movie__ttitle">Em Alta</h2>
+         </div>
+         <div class="text-container">
+            <p class="movie__text">Ver tudo <i class="fas fa-angle-right"></i></p>
+         </div>
+      </header>
+      <!--swiper JS-->
+      <main class="swiper mySwiper">
+         <div class="swiper-wrapper">
+            <div class="overlay"></div>
+            <div class="swiper-slide" data-title="O Vento Levanta"><img src="./images/movies/mini-13.jpg"></div>
+            <div class="swiper-slide" data-title="O Conto da Princesa Kaguya"><img src="./images/movies/mini-14.jpg"></div>
+            <div class="swiper-slide" data-title="O Mundo dos Pequeninos"><img src="./images/movies/mini-15.jpg"></div>
+            <div class="swiper-slide" data-title="O Menino e o Mundo"><img src="./images/movies/mini-16.jpg"></div>
+            <div class="swiper-slide" data-title="O Conto da Princesa Kaguya"><img src="./images/movies/mini-17.jpg"></div>
+            <div class="swiper-slide" data-title="O Mundo dos Pequeninos"><img src="./images/movies/mini-18.jpg"></div>
+            <div class="swiper-slide" data-title="O Mundo de Miyazaki"><img src="./images/movies/mini-19.jpg"></div>
+            <div class="swiper-slide" data-title="A Arte do Studio Ghibli"><img src="./images/movies/mini-20.jpg"></div>
+            <div class="swiper-slide" data-title="Por Trás das Cenas"><img src="./images/movies/mini-21.jpg"></div>
+            <div class="swiper-slide" data-title="A História do Studio Ghibli"><img src="./images/movies/mini-22.jpg"></div>
+            <div class="swiper-slide" data-title="O Processo de Animação"><img src="./images/movies/mini-23.jpg"></div>
+            <div class="swiper-slide" data-title="Os Personagens de Ghibli"><img src="./images/movies/mini-24.jpg"></div>
+         </div>
+         <div class="swiper-pagination"></div>
+         <div class="swiper-button-next"></div>
+         <div class="swiper-button-prev"></div>
+      </main>
+   </section>
+
+   <section class="movies" id="curtas">
+      <header>
+         <div class="title-container">
+            <h2 class="movie__ttitle">Curtas</h2>
+         </div>
+         <div class="text-container">
+            <p class="movie__text">Ver tudo <i class="fas fa-angle-right"></i></p>
+         </div>
+      </header>
+      <!--swiper JS-->
+      <main class="swiper mySwiper">
+         <div class="swiper-wrapper">
+            <div class="overlay"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-12.jpg"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-11.jpg"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-10.jpg"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-09.jpg"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-08.jpg"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-07.jpg"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-06.jpg"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-05.jpg"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-04.jpg"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-03.jpg"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-02.jpg"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-01.jpg"></div>
+         </div>
+         <div class="swiper-pagination"></div>
+         <div class="swiper-button-next"></div>
+         <div class="swiper-button-prev"></div>
+      </main>
+   </section>
+
+   <section class="movies" id="documentarios">
+      <header>
+         <div class="title-container">
+            <h2 class="movie__ttitle">Documentários</h2>
+         </div>
+         <div class="text-container">
+            <p class="movie__text">Ver tudo <i class="fas fa-angle-right"></i></p>
+         </div>
+      </header>
+      <!--swiper JS-->
+      <main class="swiper mySwiper">
+         <div class="swiper-wrapper">
+            <div class="overlay"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-06.jpg"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-12.jpg"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-03.jpg"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-09.jpg"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-01.jpg"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-07.jpg"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-04.jpg"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-10.jpg"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-02.jpg"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-08.jpg"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-05.jpg"></div>
+            <div class="swiper-slide"><img src="./images/movies/mini-11.jpg"></div>
+         </div>
+         <div class="swiper-pagination"></div>
+         <div class="swiper-button-next"></div>
+         <div class="swiper-button-prev"></div>
+      </main>
+   </section>
+
+   <footer class="footer" role="contentinfo">
+      <div class="social-links">
+         <a class="footer__link" href="#"><i class="fab fa-facebook-square"></i></a>
+         <a class="footer__link" href="#"><i class="fab fa-instagram-square"></i></a>
+         <a class="footer__link" href="#"><i class="fab fa-twitter"></i></a>
+         <a class="footer__link" href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+      <ul class="options-links">
+         <li class="footer__item"><a href="#">Idioma e legendas</a></li>
+         <li class="footer__item"><a href="#">Imprensa</a></li>
+         <li class="footer__item"><a href="#">Privacidade</a></li>
+         <li class="footer__item"><a href="#">Entre em contato</a></li>
+      </ul>
+      <div class="copy">
+         © 2024 Gabflix. Todos os direitos reservados.
+      </div>
+   </footer>
+
+   <script src="https://kit.fontawesome.com/a516c8499c.js" crossorigin="anonymous"></script>
+   <script src="./js/index.js"></script>
+   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+   <script src="./js/swiper.js"></script>
+   <script src="./js/search.js"></script>
+   <script src="./js/menu.js"></script>
+   <script>
+      // Scroll suave para links internos
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+         anchor.addEventListener('click', function (e) {
+            // Não prevenir o comportamento padrão para o link do portfólio
+            if (this.classList.contains('portfolio-link')) return;
+            
+            e.preventDefault();
+            const href = this.getAttribute('href');
+            const target = document.querySelector(href);
+            
+            if (target) {
+               if (href === '#header') {
+                  // Para o topo da página
+                  window.scrollTo({
+                     top: 0,
+                     behavior: 'smooth'
+                  });
+               } else {
+                  // Para outras seções
+                  target.scrollIntoView({
+                     behavior: 'smooth',
+                     block: 'start'
+                  });
+               }
+            }
+         });
+      });
+
+      // Tratamento do link do portfólio
+      document.addEventListener('DOMContentLoaded', function() {
+         const portfolioLink = document.querySelector('.portfolio-link');
+         if (portfolioLink) {
+            portfolioLink.addEventListener('mousedown', function(e) {
+               e.preventDefault();
+               e.stopPropagation();
+               window.location.href = '../index.html#highlights';
+            }, true);
+            
+            portfolioLink.addEventListener('click', function(e) {
+               e.preventDefault();
+               e.stopPropagation();
+            }, true);
+         }
+      });
+   </script>
+</body>
+</html>

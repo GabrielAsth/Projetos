@@ -1,0 +1,331 @@
+/* Estilos gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Netflix Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #141414;
+    color: #fff;
+}
+
+/* Estilos do header */
+.header-index {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 4%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.7) 10%, transparent);
+}
+
+.header-index--left {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.header__logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #e50914;
+}
+
+.nav-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    color: #fff;
+}
+
+.nav {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav__link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.nav__link:hover {
+    color: #b3b3b3;
+}
+
+.header-index--right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.bell-container, .user-container {
+    cursor: pointer;
+}
+
+/* Estilos do menu de usuário */
+.menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgba(0,0,0,0.9);
+    border: 1px solid #333;
+    border-radius: 4px;
+    padding: 0.5rem 0;
+    min-width: 200px;
+}
+
+.menu.active {
+    display: block;
+}
+
+.menu-container {
+    padding: 0.5rem 0;
+}
+
+.menu-container hr {
+    border: none;
+    border-top: 1px solid #333;
+    margin: 0.5rem 0;
+}
+
+.profile-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+.profile-link:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+/* Estilos dos filmes */
+.movies {
+    padding: 2rem 4%;
+}
+
+.movie__ttitle {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Estilos do footer */
+.footer {
+    padding: 2rem 4%;
+    background: #000;
+    margin-top: 2rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer__link {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.options-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer__item a {
+    color: #b3b3b3;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.copy {
+    color: #b3b3b3;
+    font-size: 0.9rem;
+}
+
+/* Menu Mobile */
+.btn-mobile {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.btn-mobile span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--white-color);
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+.btn-mobile.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.btn-mobile.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.btn-mobile.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Menu de Navegação */
+.nav__menu {
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav__menu.active {
+    transform: translateX(0);
+}
+
+/* Estilos da Busca */
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search__input {
+    width: 0;
+    padding: 8px;
+    border: none;
+    background: transparent;
+    color: #fff;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+
+.search__input.active {
+    width: 200px;
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    opacity: 1;
+}
+
+.search__input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+#fechar {
+    position: absolute;
+    right: 10px;
+    color: #fff;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.search__input.active + #fechar {
+    opacity: 1;
+}
+
+/* Feedback visual da busca */
+.swiper-slide {
+    transition: all 0.3s ease;
+}
+
+.swiper-slide.search-match {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+.movies.has-results {
+    border-left: 3px solid var(--red-color);
+    padding-left: 10px;
+}
+
+/* Menu do Usuário */
+.user-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 10px;
+    border-radius: 4px;
+    min-width: 150px;
+}
+
+.user-menu.active {
+    display: block;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    .btn-mobile {
+        display: block;
+    }
+
+    .nav__menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.9);
+        transform: translateX(-100%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 999;
+    }
+
+    .nav__list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav__item {
+        margin: 15px 0;
+    }
+
+    .search__input.active {
+        width: 150px;
+    }
+    
+    .search-container {
+        margin-right: 10px;
+    }
+} 

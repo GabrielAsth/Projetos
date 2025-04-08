@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial scale=1.0">
+ 
+  <link rel="shortcut icon" href="./icons/icons-g50.png">
+  <link rel="stylesheet" href="./css/home.css">
+  
+  <title>Gabflix</title>
+</head>
+<body>
+   
+   <!--page header-->
+   <div class="header--background">
+      
+      <!--header top-->
+      <header class="header-home">
+        <div>
+         <h2 class="header__logo header__logo--lg">Gabflix</h2>
+        </div>
+        <div class="header-content">
+          <div class="select-group">
+            <i class="fas fa-globe select__icon select__icon--left"></i>
+            <select class="select select-home">
+              <option class="select__option">Português</option>
+              <option class="select__option">English</option>
+            </select>
+            <i class="fas fa-sort-down select__icon select__icon--right"></i>
+          </div>
+          <div>
+            <button class="btn btn-home btn-home--medium" id="entrar">Entrar</button>
+         </div>
+        </div>
+      </header>
+      
+      <!--main content-->
+      <main class="main main-home">
+        <section class="">
+          <h1 class="main__title">Studios Ghibli.<br>
+            Filmes, curtas e documentários.
+          </h1>
+          <p class="main__text">
+            Pronto para assistir? Informe seu e-mail para criar ou reniciar sua assinatura.
+          </p>
+        </section>
+        <section class="main-form">
+            <div class="form-group">
+               <input class="main__input" id="txtEmail" name="txtEmail" placeholder="Email" type="text">
+               <label class="main__label" for="txtEmail">Email</label>
+               <br>
+               <span class="input__span input__span--hidden">Menssagem de erro</span>
+            </div>
+            <div class="btn-group">
+               <button class="btn btn-home btn-home--large" id="btn-entrar">
+                  Vamos lá
+                  <i class="fas fa-angle-right"></i>
+               </button>
+            </div>
+        </section>
+      </main>  
+   </div>
+
+   <!--story cards-->
+   <div class="all-cards">
+      <div class="card">
+         <div class="card-container">
+            <div class="card-text">
+               <h1 class="main__title">Aproveite na TV.</h1>
+               <h2 class="main__subtitle">Assista em Smart TVs, PlayStation, Xbox, Chromecast, Apple TV, aparelhos de Blu-ray e outros dispositivos.</h2>
+            </div>
+            <div class="card-img">
+               <div class="img-container">
+                  <img src="./images/tv.png">
+                  <div class="absolute" id="story-card-bg-01">
+                  </div>
+               </div>
+               
+            </div>
+         </div>
+      </div>
+      <div class="card">
+         <div class="card-container card-container--reversed">
+            <div class="card-text">
+               <h1 class="main__title">Baixe filmes para assistir offline.</h1>
+               <h2 class="main__subtitle">Salve seus títulos favoritos e sempre tenha algo para assistir.</h2>
+            </div>
+            <div class="card-img">
+               <div class="img-container">
+                  <img src="./images/mobile.jpg">
+                  <div class="absolute" id="story-card-bg-02">
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="card">
+         <div class="card-container">
+            <div class="card-text">
+               <h1 class="main__title">Assista quando quiser.</h1>
+               <h2 class="main__subtitle">Assista no celular, tablet, Smart TV ou notebook sem pagar a mais por isso.</h2>
+            </div>
+            <div class="card-img">
+               <div class="img-container">
+                  <img src="./images/tv.png">
+                  <div class="absolute" id="story-card-bg-03">
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!--rodapé-->
+   <footer class="footer">
+      <div class="social-links">
+         <a class="footer__link" href="#"><i class="fab fa-facebook-square"></i></a>
+         <a class="footer__link" href="#"><i class="fab fa-instagram-square"></i></a>
+         <a class="footer__link" href="#"><i class="fab fa-twitter"></i></a>
+         <a class="footer__link" href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+      <ul class="options-links">
+         <li class="footer__item">Indioma e legendas</li>
+         <li class="footer__item">Imprensa</li>
+         <li class="footer__item">Privacidade</li>
+         <li class="footer__item">Entre em contato</li>
+         <li class="footer__item">Audiodescrição</li>
+         <li class="footer__item">Avisos legais</li>
+         <li class="footer__item">Centro de ajuda</li>
+         <li class="footer__item">Carreiras</li>
+         <li class="footer__item">Preferências de cookies</li>
+         <li class="footer__item">Cartão pré-pago</li>
+         <li class="footer__item">Temos de uso</li>
+         <li class="footer__item">informações corporativas</li>
+      </ul>
+      <div class="copy">
+         © Gabflix.  
+      </div>
+   </footer>
+
+   <script src="https://kit.fontawesome.com/a516c8499c.js" crossorigin="anonymous"></script>
+   <script src="./js/home.js"></script>
+
+</body>
+</html>
