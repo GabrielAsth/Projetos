@@ -4,6 +4,60 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+// Import modules
+import navigationManager from './navigation.js';
+import animationManager from './animations.js';
+
+// Main App Class
+class App {
+	constructor() {
+		this.initialize();
+	}
+
+	initialize() {
+		// Initialize when DOM is loaded
+		document.addEventListener('DOMContentLoaded', () => {
+			this.setupEventListeners();
+			this.initializeModules();
+		});
+	}
+
+	setupEventListeners() {
+		// Window resize handler
+		window.addEventListener('resize', () => {
+			this.handleResize();
+		});
+
+		// Scroll handler
+		window.addEventListener('scroll', () => {
+			this.handleScroll();
+		});
+	}
+
+	initializeModules() {
+		// Initialize navigation
+		navigationManager.updateActiveMenuItem();
+
+		// Initialize animations
+		animationManager.initialize();
+	}
+
+	handleResize() {
+		// Handle responsive behavior
+		if (window.innerWidth > 768) {
+			document.querySelector('#nav').classList.remove('active');
+		}
+	}
+
+	handleScroll() {
+		// Handle scroll-based animations
+		animationManager.handleScroll();
+	}
+}
+
+// Initialize App
+const app = new App();
+
 (function($) {
 
 	var	$window = $(window),

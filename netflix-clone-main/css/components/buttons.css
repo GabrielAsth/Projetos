@@ -1,0 +1,86 @@
+.btn{
+   font-style: none;
+   font-weight: normal;
+
+   border: none;
+   border-radius: 5px;
+
+   cursor: pointer;
+}
+
+.btn-home{
+   background: #d81f26;
+   color: #fff;
+}
+
+.btn-home--medium{
+   width: 77px;
+   height: 36px;
+   font-size: 14px;
+   line-height: 19px;
+}
+
+.btn-home--large{
+   width: 100%;
+   height: 64px;
+   font-size: 22px;
+   line-height: 33px;
+}
+
+.btn-home:hover{
+   background: #f40612;
+   cursor: pointer;
+}
+
+
+
+.btn--dark{
+   background-color: rgba(109,109,110, 0.5);
+   color: white;
+}
+
+.btn--light{
+   background-color: white;
+   color: #000;
+}
+
+
+.btn-index{
+   padding: 9px 27px 9px 22px;
+   
+   font-size: 16px;
+   font-weight: 600;
+
+   margin-right: 20px;
+   
+}
+
+.btn-index i{
+   margin-right: 8px;
+}
+
+.btn-index:hover{
+   background-color: rgba(26, 26, 26, 0.582);
+   color: #E50914;
+   transition: .3s ease all;
+}
+
+
+/*responsive*/
+@media screen and (max-width:560px){
+   .btn-home--medium{
+      margin-left: 25%;
+      width: 50%;
+      height: 36px;
+   }
+}
+
+@media screen and (max-width:860px){
+   .btn-index{
+      transition: .5 ease;
+      margin-right: 0;
+   }
+   .btn-index:first-child{
+      margin-bottom: 20px;
+   }
+}

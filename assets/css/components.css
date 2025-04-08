@@ -1,0 +1,147 @@
+/* Components */
+
+/* Header */
+#header {
+    position: relative;
+    padding: 2em 0 0 0;
+    margin-bottom: 2em;
+}
+
+#logo {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+#logo h1 {
+    font-size: 2.5em;
+    font-weight: 900;
+    letter-spacing: -0.025em;
+    line-height: 1em;
+}
+
+#logo p {
+    font-size: 1.25em;
+    color: var(--text-muted);
+}
+
+/* Navigation */
+#nav {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+#nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+#nav li {
+    display: inline-block;
+    margin: 0 0.35em;
+    padding: 0;
+    vertical-align: middle;
+}
+
+#nav a {
+    display: inline-block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+#nav a:hover {
+    background-color: var(--bg-card);
+}
+
+/* Sections */
+.section {
+    padding: 4em 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+/* Features */
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -1em;
+}
+
+.feature {
+    flex: 1;
+    min-width: 300px;
+    padding: 1em;
+}
+
+/* Highlights */
+.highlight {
+    background-color: var(--bg-card);
+    padding: 2em;
+    border-radius: 4px;
+    margin-bottom: 2em;
+}
+
+/* Contact Form */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.75em;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    margin-bottom: 1em;
+}
+
+.contact-form textarea {
+    min-height: 150px;
+}
+
+/* Buttons */
+.button {
+    display: inline-block;
+    padding: 0.75em 1.5em;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.button:hover {
+    background-color: var(--primary-hover);
+}
+
+.button.style1 {
+    background-color: var(--primary-color);
+}
+
+.button.style2 {
+    background-color: var(--secondary-color);
+}
+
+.button.style3 {
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+}
+
+/* Footer */
+#footer {
+    padding: 4em 0;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+}
+
+#copyright {
+    text-align: center;
+    margin-top: 2em;
+    padding-top: 2em;
+    border-top: 1px solid var(--border-color);
+} 

@@ -1,0 +1,105 @@
+.header__logo{
+   font-family: 'Bebas Neue', cursive;
+   color: var(--vermelho);
+   letter-spacing: 2px;
+   cursor: pointer;
+}
+
+.header__logo--md{
+   font-size: 30px;
+
+   padding: 2% 0;
+   margin-right: 40px;
+}
+
+.header__logo--lg{
+   font-size: 45px; 
+
+   width: 50%;
+}
+
+
+
+.main__title{
+   font-weight: bold;
+   font-size: 40px;
+   line-height: 54px;
+}
+
+.main__subtitle{
+   font-weight: 500;
+   font-size: 20px;
+   line-height: 32px;
+}
+
+.card-text .main__title{
+   padding: 20px 0;
+}
+
+
+.main-home .main-title{
+   margin-bottom: 22px;
+}
+.main-home .main__subtitle{
+   margin-bottom: 30px;
+}
+
+
+.movie__title{
+   font-size: 20px;
+   color: var(--branco);
+   opacity: .8;
+   font-weight: 700; 
+}
+
+
+
+@media screen and (max-width:980px){
+   .header__logo--md{
+      font-size: 3vw;
+   }
+}
+
+@media screen and (max-width:920px){
+   .header__logo--md{
+      font-size: 25px;
+   }
+}
+
+@media screen and (max-width: 800px) {
+   .main__title{
+      font-size: 5vh;
+   }
+   
+   .main__subtitle{
+      font-size: 3vh;
+   }
+
+   .header__logo--lg{
+      font-size: 5vh;
+   }
+}
+
+
+@media screen and (max-width:560px) {
+   .header__logo--lg{
+      width: 100%;
+
+      display: flex;
+      justify-content: center;
+   }  
+}
+
+
+@media screen and (max-width:400px){
+   .header__logo--md{
+      margin: 0;
+   }
+}
+
+
+
+
+
+
+
