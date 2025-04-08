@@ -206,10 +206,23 @@
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script type="module" src="assets/js/main.js"></script>
 			<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 			<script src="netflix-clone-main/js/swiper.js"></script>
 			<script src="https://kit.fontawesome.com/a516c8499c.js" crossorigin="anonymous"></script>
+			<!-- Script específico para o botão "Voltar ao portfólio" -->
+			<script>
+				document.addEventListener('DOMContentLoaded', function() {
+					const backBtn = document.querySelector('.button.style2[href="index.html#highlights"]');
+					if (backBtn) {
+						backBtn.addEventListener('click', function(e) {
+							e.preventDefault();
+							e.stopPropagation();
+							window.location.href = 'index.html#highlights';
+						}, true);
+					}
+				});
+			</script>
 
 	</body>
 </html>
