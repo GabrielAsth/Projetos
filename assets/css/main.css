@@ -3593,112 +3593,44 @@ input, select, textarea {
 /* Menu Mobile */
 .menu-mobile-button {
     display: none;
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 9999;
-    background: rgba(0, 0, 0, 0.5);
-    border: none;
-    cursor: pointer;
-    padding: 15px;
-    border-radius: 5px;
-    outline: none;
-    width: 50px;
-    height: 50px;
-}
-
-.menu-mobile-button span {
-    display: block;
-    width: 25px;
-    height: 2px;
-    background-color: #fff;
-    margin: 5px auto;
-    transition: 0.4s;
-    border-radius: 2px;
 }
 
 @media screen and (max-width: 768px) {
-    .menu-mobile-button {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
     #nav {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        background-color: rgba(0, 0, 0, 0.95);
-        padding-top: 80px;
-        z-index: 9998;
+        display: block;
     }
+}
 
-    #nav.active {
+@media screen and (max-width: 768px) {
+    #nav {
         display: block !important;
+        position: static;
+        width: auto;
+        height: auto;
+        background: none;
+        padding: 0;
     }
 
     #nav ul {
-        flex-direction: column;
-        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         padding: 0;
         margin: 0;
-        list-style: none;
     }
 
     #nav ul li {
-        margin: 15px 0;
-        width: 100%;
-        text-align: center;
-    }
-
-    #nav ul li > ul {
-        position: static !important;
-        width: 100%;
-        background: transparent !important;
-        padding: 10px 0;
-        display: none;
-        opacity: 1 !important;
-        visibility: visible !important;
-        margin-top: 10px !important;
-        transform: none !important;
-        box-shadow: none !important;
-    }
-
-    #nav ul li.active > ul {
-        display: block;
-    }
-
-    .menu-mobile-button.active span:nth-child(1) {
-        transform: rotate(-45deg) translate(-5px, 6px);
-    }
-
-    .menu-mobile-button.active span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .menu-mobile-button.active span:nth-child(3) {
-        transform: rotate(45deg) translate(-5px, -6px);
+        margin: 5px;
     }
 
     #nav ul li a {
-        color: #fff !important;
-        font-size: 1.2em;
-        padding: 10px 20px;
-        display: block;
-        text-decoration: none;
-    }
-
-    #nav ul li > ul li a {
+        color: inherit;
         font-size: 1em;
-        padding: 8px 20px;
+        padding: 5px 10px;
     }
 
-    #nav ul li > ul li {
-        margin: 5px 0;
+    #nav ul li > ul {
+        display: none;
     }
 }
 
@@ -3723,5 +3655,191 @@ input, select, textarea {
     #logo {
         z-index: 9997;
         position: relative;
+    }
+}
+
+/* Menu Mobile */
+#titleBar {
+    display: none;
+    position: fixed;
+    left: 1rem;
+    top: 1rem;
+    z-index: 10001;
+}
+
+#titleBar .toggle {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#titleBar .toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    transition: all 0.3s ease;
+}
+
+body.navPanel-visible #titleBar .toggle span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+body.navPanel-visible #titleBar .toggle span:nth-child(2) {
+    opacity: 0;
+}
+
+body.navPanel-visible #titleBar .toggle span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+}
+
+body.navPanel-visible .overlay {
+    display: block;
+}
+
+@media screen and (max-width: 980px) {
+    #titleBar {
+        display: block;
+    }
+
+    #nav {
+        position: fixed;
+        left: -300px;
+        top: 0;
+        width: 300px;
+        height: 100vh;
+        background: #1c1c1c;
+        padding: 2rem;
+        transition: left 0.3s ease;
+        z-index: 10000;
+    }
+
+    body.navPanel-visible #nav {
+        left: 0;
+    }
+
+    #nav ul {
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+
+    #nav ul li {
+        display: block;
+        margin: 1rem 0;
+    }
+
+    #nav ul li a {
+        display: block;
+        padding: 0.5rem 0;
+        color: #fff;
+        text-decoration: none;
+    }
+}
+
+/* Menu Mobile */
+@media screen and (max-width: 980px) {
+    #titleBar {
+        display: block;
+        position: fixed;
+        left: 1rem;
+        top: 1rem;
+        z-index: 10001;
+    }
+
+    #titleBar .toggle {
+        width: 40px;
+        height: 40px;
+        padding: 0;
+        border: none;
+        background: rgba(92, 95, 103, 0.5);
+        border-radius: 4px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    #titleBar .toggle:before {
+        content: '\f0c9';
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        color: #fff;
+        font-size: 1.1em;
+    }
+
+    #nav {
+        display: none;
+    }
+
+    body.navPanel-visible #nav {
+        display: block;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 275px;
+        height: 100vh;
+        background: #242730;
+        padding: 2rem;
+        overflow-y: auto;
+        z-index: 10000;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    }
+
+    #nav ul {
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+
+    #nav ul li {
+        display: block;
+        margin: 1rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    #nav ul li:last-child {
+        border-bottom: none;
+    }
+
+    #nav ul li a {
+        display: block;
+        padding: 0.5rem 0;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 9999;
+    }
+
+    body.navPanel-visible .overlay {
+        display: block;
     }
 }
