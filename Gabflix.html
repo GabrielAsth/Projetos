@@ -1,259 +1,215 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Gabflix | Gabriel Bussinger</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Gabflix - Um clone do Netflix focado em filmes do Studio Ghibli" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="netflix-clone-main/css/index.css">
+		<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+		<link rel="stylesheet" href="netflix-clone-main/css/swiper.css">
+		<link rel="icon" type="image/png" href="netflix-clone-main/icons/icons-g50.png" />
+	</head>
+	<body class="projeto gabflix is-preload">
+		<div id="page-wrapper">
 
-   <link rel="shortcut icon" href="./icons/icons-g50.png">  
-   <link rel="stylesheet" href="./css/index.css">
-   
-   <!--swiper css-->
-   <link  rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
-   <link rel="stylesheet" href="./css/swiper.css">
+			<!-- Header -->
+				<section id="header" class="wrapper">
+					<!-- Logo -->
+					<div id="logo">
+						<h1><a href="index.html">Gabriel Bussinger</a></h1>
+						<p>Desenvolvedor Web</p>
+					</div>
 
-   <title>Gabflix</title>
-</head>
-<body>
+					<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href="index.html">Início</a></li>
+							<li>
+								<a href="index.html#highlights">Projetos</a>
+								<ul>
+									<li class="current"><a href="Gabflix.html">Gabflix</a></li>
+									<li><a href="#" class="coming-soon">Projeto 2 (Em Breve)</a></li>
+									<li><a href="#" class="coming-soon">Projeto 3 (Em Breve)</a></li>
+								</ul>
+							</li>
+							<li><a href="Sobre mim.html">Sobre Mim</a></li>
+							<li><a href="Aprendendo.html">Conhecimentos</a></li>
+							<li><a href="Futuro.html">Objetivos</a></li>
+						</ul>
+					</nav>
+				</section>
 
-   <header class="header-index" id="header">
-      <div class="header-index--left">
-         <div>
-            <h2 class="header__logo header__logo--md" id="logo">Gabflix</h2>
-            <ul class="actions">
-               <li><a href="index.html" class="header__logo header__logo--md">Bussinger</a></li>
-            </ul>
-         </div>
-         <div class="nav-btn" id="btn-mobile">
-            Navegar <i class="fas fa-caret-down" id="icon-menu"></i>
-         </div>
-         <nav id="nav">
-            <a class="nav__link" href="#" >Início</a>
-            <a class="nav__link" href="#">Filmes</a>
-            <a class="nav__link" href="#">Curtas</a>
-            <a class="nav__link" href="#">Documentários</a>
-            <a class="nav__link" href="#">Minha lista</a>
-         </nav>
-      </div>
-      <div class="header-index--right">
-         <div class="search-container">
-            <i class="fas fa-search" id="lupa"></i>
-            <input class="search__input" id="search" type="text" placeholder="Títulos, gente e gêneros">
-            <i class="fas fa-times" id="fechar"></i>
-         </div>
-         <div class="bell-container">
-            <i class="fas fa-bell" id="sino"></i>
-         </div>
-         <div class="user-container">
-            <div class="avatar-container" id="avatar"><img class="avatar__image" src="./images/perfil.jpg"></div>
-            <nav class="menu" id="menu">
-               <div class="menu-container menu-container--top menu-avatar">
-                  <div class="user-avatar">
-                     <div class="avatar-container"><img class="avatar__image" src="./images/perfil.jpg"></div>
-                     <a class="nav__link" href="#" >User 1</a>
-                  </div>
-                  <div class="user-avatar">
-                     <div class="avatar-container"><img class="avatar__image" src="./images/perfil.jpg"></div>
-                     <a class="nav__link" href="#" >User 2</a>
-                  </div>
-                  <div class="user-avatar">
-                     <div class="avatar-container"><img class="avatar__image" src="./images/perfil.jpg"></div>
-                     <a class="nav__link" href="#" >User 3</a>
-                  </div>
-               </div>
-               <hr>
-               <div class="menu-container menu-container--bottom menu-options">
-                  <a class="nav__link" href="#">Gerenciar perfis</a>
-                  <ac lass="nav__link" href="#" id="logOut">Sair do Gabflix</a>
-               </div>
-            </nav>
-         </div>
-      </div>
-   </header>
+			<!-- Main -->
+				<section id="main" class="wrapper style2">
+					<div class="title">Projeto Gabflix</div>
+					<div class="container">
 
-   <main class="main main-index">
-            <div class="title">
-               <h1 class="main__title">Meu Amigo Totoro</h1>
-            </div>
-            <div class="text">
-               <p class=" main__text">
-                  Mei é uma jovem que encontra uma pequena passagem em seu quintal, 
-                  que a leva à um lendário espírito da floresta conhecido como Totoro. Sua mãe 
-                  está no hospital e seu pai divide o tempo entre dar aulas na faculdade e cuidar de
-                   sua mulher doente. Quando Mei tenta visitar a mãe por conta própria, se perde na floresta 
-                   e só o grande e fofo Totoro pode ajudar a menina a achar o caminho de volta para casa.
-               </p>
-            </div>
-            <div class="buttons">
-               <button role="button" class="btn btn-index btn--light"><i class="fas fa-play"></i>
-               Assistir
-               </button>
-               <button role="button" class="btn btn-index btn--dark"><i class="fas fa-info-circle"></i>
-               Mais informações
-               </button>
-            </div>
-   </main>
-   
-   <!-- Movies -->
-   <section class="movies">
-      <header>
-         <div class="title-container">
-            <h2 class="movie__ttitle">Populares no Gabflix</h2>
-         </div>
-         <div class=" text-container">
-            <p class="movie__text">Ver tudo <i class="fas fa-angle-right"></i></p>
-         </div>
-      </header>
-      <!--swiper JS-->
-      <main class="swiper mySwiper">
-         <div class="swiper-wrapper">
-            <div class="overlay"></div>
-            <div class="swiper-slide"><img src="./images/movies/mini-01.jpg"></div>
-            <div class="swiper-slide"><img src="./images/movies/mini-02.jpg"></div>
-            <div class="swiper-slide"><img src="./images/movies/mini-03.jpg"></div>
-            <div class="swiper-slide"><img src="./images/movies/mini-04.jpg"></div>
-            <div class="swiper-slide"><img src="./images/movies/mini-05.jpg"></div>
-            <div class="swiper-slide"><img src="./images/movies/mini-06.jpg"></div>
-            <div class="swiper-slide"><img src="./images/movies/mini-07.jpg"></div>
-            <div class="swiper-slide"><img src="./images/movies/mini-08.jpg"></div>
-            <div class="swiper-slide"><img src="./images/movies/mini-09.jpg"></div>
-            <div class="swiper-slide"><img src="./images/movies/mini-10.jpg"></div>
-            <div class="swiper-slide"><img src="./images/movies/mini-11.jpg"></div>
-            <div class="swiper-slide"><img src="./images/movies/mini-12.jpg"></div>
-         </div>
-         <div class="swiper-pagination"></div>
-         <div class="swiper-button-next"></div>
-         <div class="swiper-button-prev"></div>
-      </main>
-   </section>
+						<!-- Descrição do Projeto -->
+						<div class="row gtr-150">
+							<div class="col-8 col-12-medium">
+								<div id="content">
+									<article class="box post">
+										<header class="style1">
+											<h2>Clone do Netflix com Tema Studio Ghibli</h2>
+											<p>Um projeto de streaming inspirado na Netflix, focado nos filmes do Studio Ghibli</p>
+										</header>
 
-   <section class="movies">
-      <header>
-         <div class="title-container">
-            <h2 class="movie__ttitle">Em Alta</h2>
-         </div>
-         <div class=" text-container">
-            <p class="movie__text">Ver tudo <i class="fas fa-angle-right"></i></p>
-         </div>
-      </header>
-      <!--swiper JS-->
-      <main class="swiper mySwiper">
-         <div class="swiper-wrapper">
-            <div class="overlay"></div>
-            <div class="swiper-slide"><img src="./images/movies/mini-13.jpg"></div>
-            <div class="swiper-slide"><img src="./images/movies/mini-14.jpg"></div>
-            <div class="swiper-slide"><img src="./images/movies/mini-15.jpg"></div>
-            <div class="swiper-slide"><img src="./images/movies/mini-16.jpg"></div>
-            <div class="swiper-slide"><img src="./images/movies/mini-17.jpg"></div>
-            <div class="swiper-slide"><img src="./images/movies/mini-18.jpg"></div>
-            <div class="swiper-slide"><img src="./images/movies/mini-19.jpg"></div>
-            <div class="swiper-slide"><img src="./images/movies/mini-20.jpg"></div>
-            <div class="swiper-slide"><img src="./images/movies/mini-21.jpg"></div>
-            <div class="swiper-slide"><img src="./images/movies/mini-22.jpg"></div>
-            <div class="swiper-slide"><img src="./images/movies/mini-23.jpg"></div>
-            <div class="swiper-slide"><img src="./images/movies/mini-24.jpg"></div>
-         </div>
-         <div class="swiper-pagination"></div>
-         <div class="swiper-button-next"></div>
-         <div class="swiper-button-prev"></div>
-      </main>
-   </section>
+										<div class="project-overview">
+											<h3>Visão Geral</h3>
+											<p>O Gabflix é um projeto que recria a interface do Netflix, adaptando-a para apresentar o catálogo do Studio Ghibli. Desenvolvido com HTML, CSS e JavaScript, o projeto demonstra habilidades em:</p>
+											
+											<ul class="feature-list">
+												<li>Layout responsivo com CSS Grid e Flexbox</li>
+												<li>Animações suaves e transições</li>
+												<li>Carrossel de imagens com Swiper.js</li>
+												<li>Sistema de navegação dinâmico</li>
+												<li>Interface de usuário moderna e intuitiva</li>
+											</ul>
+										</div>
 
-   <section class="movies">
-      <header>
-         <div class="title-container">
-            <h2 class="movie__ttitle">Curtas</h2>
-         </div>
-         <div class=" text-container">
-            <p class="movie__text">Ver tudo <i class="fas fa-angle-right"></i></p>
-         </div>
-      </header>
-      <!--swiper JS-->
-      <main class="swiper mySwiper">
-         <div class="swiper-wrapper">
-            <div class="overlay"></div>
-            <div class="swiper-slide"><img src="./images/movies/mini-01.jpg"></div>
-            <div class="swiper-slide"><img src="./images/movies/mini-02.jpg"></div>
-            <div class="swiper-slide"><img src="./images/movies/mini-03.jpg"></div>
-            <div class="swiper-slide"><img src="./images/movies/mini-04.jpg"></div>
-            <div class="swiper-slide"><img src="./images/movies/mini-05.jpg"></div>
-            <div class="swiper-slide"><img src="./images/movies/mini-06.jpg"></div>
-            <div class="swiper-slide"><img src="./images/movies/mini-07.jpg"></div>
-            <div class="swiper-slide"><img src="./images/movies/mini-08.jpg"></div>
-            <div class="swiper-slide"><img src="./images/movies/mini-09.jpg"></div>
-            <div class="swiper-slide"><img src="./images/movies/mini-10.jpg"></div>
-            <div class="swiper-slide"><img src="./images/movies/mini-11.jpg"></div>
-            <div class="swiper-slide"><img src="./images/movies/mini-12.jpg"></div>
-         </div>
-         <div class="swiper-pagination"></div>
-         <div class="swiper-button-next"></div>
-         <div class="swiper-button-prev"></div>
-      </main>
-   </section>
+										<div class="tech-stack">
+											<h3>Tecnologias Utilizadas</h3>
+											<div class="tech-grid">
+												<div class="tech-item">
+													<i class="fab fa-html5"></i>
+													<span>HTML5</span>
+												</div>
+												<div class="tech-item">
+													<i class="fab fa-css3-alt"></i>
+													<span>CSS3</span>
+												</div>
+												<div class="tech-item">
+													<i class="fab fa-js"></i>
+													<span>JavaScript</span>
+												</div>
+												<div class="tech-item">
+													<i class="fas fa-mobile-alt"></i>
+													<span>Responsive</span>
+												</div>
+											</div>
+										</div>
+									</article>
+								</div>
+							</div>
+							<div class="col-4 col-12-medium">
+								<div id="sidebar">
+									<section class="box">
+										<header>
+											<h3>Navegação do Projeto</h3>
+										</header>
+										<ul class="style2">
+											<li><a href="netflix-clone-main/index.html" class="button style1" target="_blank"><i class="fas fa-play"></i> Ver Demo</a></li>
+											<li><a href="#features" class="button style3"><i class="fas fa-info-circle"></i> Recursos</a></li>
+										</ul>
+										<footer>
+											<a href="index.html#highlights" class="button style2"><i class="fas fa-arrow-left"></i> Voltar aos Projetos</a>
+										</footer>
+									</section>
+								</div>
+							</div>
+						</div>
 
-   <section class="movies">
-      <header>
-         <div class="title-container">
-            <h2 class="movie__ttitle">Documentários</h2>
-         </div>
-         <div class=" text-container">
-            <p class="movie__text">Ver tudo <i class="fas fa-angle-right"></i></p>
-         </div>
-      </header>
-      <!--swiper JS-->
-      <main class="swiper mySwiper">
-         <div class="swiper-wrapper">
-            <div class="overlay"></div>
-            <div class="swiper-slide"><img src="./images/movies/mini-13.jpg"></div>
-            <div class="swiper-slide"><img src="./images/movies/mini-14.jpg"></div>
-            <div class="swiper-slide"><img src="./images/movies/mini-15.jpg"></div>
-            <div class="swiper-slide"><img src="./images/movies/mini-16.jpg"></div>
-            <div class="swiper-slide"><img src="./images/movies/mini-17.jpg"></div>
-            <div class="swiper-slide"><img src="./images/movies/mini-18.jpg"></div>
-            <div class="swiper-slide"><img src="./images/movies/mini-19.jpg"></div>
-            <div class="swiper-slide"><img src="./images/movies/mini-20.jpg"></div>
-            <div class="swiper-slide"><img src="./images/movies/mini-21.jpg"></div>
-            <div class="swiper-slide"><img src="./images/movies/mini-22.jpg"></div>
-            <div class="swiper-slide"><img src="./images/movies/mini-23.jpg"></div>
-            <div class="swiper-slide"><img src="./images/movies/mini-24.jpg"></div>
-         </div>
-         <div class="swiper-pagination"></div>
-         <div class="swiper-button-next"></div>
-         <div class="swiper-button-prev"></div>
-      </main>
-   </section>
-   
-   <!--rodapé-->
-   <footer class="footer">
-      <div class="social-links">
-         <a class="footer__link" href="#"><i class="fab fa-facebook-square"></i></a>
-         <a class="footer__link" href="#"><i class="fab fa-instagram-square"></i></a>
-         <a class="footer__link" href="#"><i class="fab fa-twitter"></i></a>
-         <a class="footer__link" href="#"><i class="fab fa-youtube"></i></a>
-      </div>
-      <ul class="options-links">
-         <li class="footer__item">Indioma e legendas</li>
-         <li class="footer__item">Imprensa</li>
-         <li class="footer__item">Privacidade</li>
-         <li class="footer__item">Entre em contato</li>
-         <li class="footer__item">Audiodescrição</li>
-         <li class="footer__item">Avisos legais</li>
-         <li class="footer__item">Centro de ajuda</li>
-         <li class="footer__item">Carreiras</li>
-         <li class="footer__item">Preferências de cookies</li>
-         <li class="footer__item">Cartão pré-pago</li>
-         <li class="footer__item">Temos de uso</li>
-         <li class="footer__item">informações corporativas</li>
-      </ul>
-      <div class="copy">
-         © Gabflix.
-      </div>
-   </footer>
-   
+						<!-- Recursos -->
+						<div id="features" class="features-section">
+							<header class="style1">
+								<h2>Recursos do Projeto</h2>
+							</header>
+							<div class="row">
+								<div class="col-4 col-12-medium">
+									<section class="highlight">
+										<h3><i class="fas fa-desktop"></i> Interface Responsiva</h3>
+										<p>Design adaptativo que funciona perfeitamente em diferentes dispositivos e tamanhos de tela.</p>
+									</section>
+								</div>
+								<div class="col-4 col-12-medium">
+									<section class="highlight">
+										<h3><i class="fas fa-film"></i> Catálogo Curado</h3>
+										<p>Seleção especial de filmes do Studio Ghibli, organizados por categorias e popularidade.</p>
+									</section>
+								</div>
+								<div class="col-4 col-12-medium">
+									<section class="highlight">
+										<h3><i class="fas fa-search"></i> Busca Inteligente</h3>
+										<p>Sistema de busca que permite encontrar filmes por título, personagens ou gênero.</p>
+									</section>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
 
-   <script src="https://kit.fontawesome.com/a516c8499c.js" crossorigin="anonymous"></script>
-   <script src="./js/index.js"></script>
-   <!--swiper JS-->
-   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-   <script src="./js/swiper.js"></script>
-</body>
+			<!-- Footer -->
+				<section id="footer" class="wrapper">
+					<div class="title">Contato</div>
+					<div class="container">
+						<header class="style1">
+							<h2>Interessado em colaborar?</h2>
+							<p>Entre em contato para discutirmos novos projetos</p>
+						</header>
+						<div class="row">
+							<div class="col-6 col-12-medium">
+								<section>
+									<form method="post" action="https://formspree.io/f/seu-form-id">
+										<div class="row gtr-50">
+											<div class="col-6 col-12-small">
+												<input type="text" name="name" id="contact-name" placeholder="Nome" required />
+											</div>
+											<div class="col-6 col-12-small">
+												<input type="email" name="email" id="contact-email" placeholder="Email" required />
+											</div>
+											<div class="col-12">
+												<textarea name="message" id="contact-message" placeholder="Mensagem" rows="4" required></textarea>
+											</div>
+											<div class="col-12">
+												<ul class="actions">
+													<li><input type="submit" class="style1" value="Enviar Mensagem" /></li>
+													<li><input type="reset" class="style2" value="Limpar" /></li>
+												</ul>
+											</div>
+										</div>
+									</form>
+								</section>
+							</div>
+							<div class="col-6 col-12-medium">
+								<section class="feature-list small">
+									<div class="row">
+										<div class="col-6 col-12-small">
+											<section>
+												<h3 class="icon solid fa-comment">Redes Sociais</h3>
+												<p>
+													<a href="https://instagram.com/gabriel_asth" target="_blank"><i class="fab fa-instagram"></i> @gabriel_asth</a><br />
+													<a href="https://linkedin.com/in/gabriel-bussinger/" target="_blank"><i class="fab fa-linkedin"></i> gabriel-bussinger</a>
+												</p>
+											</section>
+										</div>
+										<div class="col-6 col-12-small">
+											<section>
+												<h3 class="icon solid fa-envelope">Email</h3>
+												<p>
+													<a href="mailto:gabrielasth34@gmail.com">gabrielasth34@gmail.com</a>
+												</p>
+											</section>
+										</div>
+									</div>
+								</section>
+							</div>
+						</div>
+					</div>
+				</section>
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+			<script src="netflix-clone-main/js/swiper.js"></script>
+			<script src="https://kit.fontawesome.com/a516c8499c.js" crossorigin="anonymous"></script>
+
+	</body>
 </html>
