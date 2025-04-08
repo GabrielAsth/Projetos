@@ -3597,26 +3597,32 @@ input, select, textarea {
     top: 20px;
     right: 20px;
     z-index: 9999;
-    background: none;
+    background: rgba(0, 0, 0, 0.5);
     border: none;
     cursor: pointer;
-    padding: 10px;
+    padding: 15px;
+    border-radius: 5px;
     outline: none;
+    width: 50px;
+    height: 50px;
 }
 
 .menu-mobile-button span {
     display: block;
-    width: 30px;
-    height: 3px;
+    width: 25px;
+    height: 2px;
     background-color: #fff;
-    margin: 6px 0;
+    margin: 5px auto;
     transition: 0.4s;
     border-radius: 2px;
 }
 
 @media screen and (max-width: 768px) {
     .menu-mobile-button {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     #nav {
@@ -3640,6 +3646,7 @@ input, select, textarea {
         align-items: center;
         padding: 0;
         margin: 0;
+        list-style: none;
     }
 
     #nav ul li {
@@ -3649,7 +3656,7 @@ input, select, textarea {
     }
 
     #nav ul li > ul {
-        position: relative !important;
+        position: static !important;
         width: 100%;
         background: transparent !important;
         padding: 10px 0;
@@ -3658,6 +3665,7 @@ input, select, textarea {
         visibility: visible !important;
         margin-top: 10px !important;
         transform: none !important;
+        box-shadow: none !important;
     }
 
     #nav ul li.active > ul {
@@ -3665,7 +3673,7 @@ input, select, textarea {
     }
 
     .menu-mobile-button.active span:nth-child(1) {
-        transform: rotate(-45deg) translate(-9px, 6px);
+        transform: rotate(-45deg) translate(-5px, 6px);
     }
 
     .menu-mobile-button.active span:nth-child(2) {
@@ -3673,7 +3681,7 @@ input, select, textarea {
     }
 
     .menu-mobile-button.active span:nth-child(3) {
-        transform: rotate(45deg) translate(-8px, -8px);
+        transform: rotate(45deg) translate(-5px, -6px);
     }
 
     #nav ul li a {
@@ -3681,10 +3689,39 @@ input, select, textarea {
         font-size: 1.2em;
         padding: 10px 20px;
         display: block;
+        text-decoration: none;
     }
 
     #nav ul li > ul li a {
         font-size: 1em;
         padding: 8px 20px;
+    }
+
+    #nav ul li > ul li {
+        margin: 5px 0;
+    }
+}
+
+/* Animação do menu */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#nav.active {
+    animation: slideIn 0.3s ease forwards;
+}
+
+/* Ajuste para o logo quando o menu mobile está ativo */
+@media screen and (max-width: 768px) {
+    #logo {
+        z-index: 9997;
+        position: relative;
     }
 }
