@@ -18,13 +18,7 @@
 <body class="homepage is-preload">
 	<div id="page-wrapper">
 		<!-- Menu Mobile Button -->
-		<div id="titleBar">
-			<a href="#navPanel" class="toggle">
-				<span></span>
-				<span></span>
-				<span></span>
-			</a>
-		</div>
+
 		<div class="overlay"></div>
 
 		<!-- Header -->
@@ -44,8 +38,16 @@
 						<a href="#highlights">Projetos</a>
 						<ul>
 							<li><a href="Gabflix.html">Gabflix</a></li>
-							<li><a href="#" class="coming-soon">Projeto 2 (Em Breve)</a></li>
+							<li>
+								<a href="https://bsx-b2b.vercel.app/">Landing Page B2B</a>
+							</li>
+							<li>
+								<a href="https://grupobsx.com.br/">Site institucional</a>
+							</li>
 							<li><a href="https://duplastico.com.br/">Duplastico</a></li>
+							<li>
+								<a href="#" class="coming-soon">Projeto 2 (Em Breve)</a>
+							</li>
 						</ul>
 					</li>
 					<li><a href="Sobre mim.html">Sobre Mim</a></li>
@@ -67,7 +69,8 @@
 				</p>
 				<ul class="actions">
 					<li><a href="#highlights" class="button style3 large">Ver Projetos</a></li>
-					<li><a href="Sobre mim.html" class="button style1 large">Sobre Mim</a></li>
+					<li><a href="Sobre mim.html" style="border: 2px solid rgb(255, 255, 255);"" class=" button style1
+							large">Sobre Mim</a></li>
 				</ul>
 			</div>
 		</section>
@@ -218,11 +221,12 @@
 							<form method="post" action="https://formspree.io/f/mkgjpygo">
 								<div class="row gtr-50">
 									<div class="col-6 col-12-small">
-										<input type="text" name="name" id="contact-name" placeholder="Nome" required />
+										<input type="text" name="name" id="contact-name" placeholder="Nome"
+											autocomplete="name" required />
 									</div>
 									<div class="col-6 col-12-small">
 										<input type="email" name="email" id="contact-email" placeholder="Email"
-											required />
+											autocomplete="email" required />
 									</div>
 									<div class="col-12">
 										<textarea name="message" id="contact-message" placeholder="Mensagem" rows="4"

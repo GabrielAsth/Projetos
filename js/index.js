@@ -48,17 +48,6 @@ function limparPesquisa(){
    search.value = "";
 }
 
-
-/*scroll function*/
-function scrollFunction() {
-   if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
-     document.getElementById("header").style.background = "#141414";
-   } else {
-     document.getElementById("header").style.background = "transparent";
-   }
-}
-
-
 /*redirecionar*/
 function redirect() {
    window.location.href = "home.html";
@@ -78,22 +67,35 @@ function exibirAvatar(event) {
 /*chamadas de funções*/
 
 /*exibir menu*/
-btnMobile.addEventListener('click', exibirMenu);
-btnMobile.addEventListener('touchstart', exibirMenu);
+if (btnMobile) {
+    btnMobile.addEventListener('click', exibirMenu);
+    btnMobile.addEventListener('touchstart', exibirMenu);
+}
 
 /*exibir pesquisa*/
-lupa.addEventListener('click', exibirPesquisa);
+if (lupa) {
+    lupa.addEventListener('click', exibirPesquisa);
+}
 
 /*limpar pesquisa*/
-fechar.addEventListener('click', limparPesquisa);
+if (fechar) {
+    fechar.addEventListener('click', limparPesquisa);
+}
 
 /*scroll function*/
 window.onscroll = function() {scrollFunction()};
 
 /*redirecionar*/
-logo.addEventListener('click', redirect);
-logOut.addEventListener('click', redirect);
+if (logo) {
+    logo.addEventListener('click', redirect);
+}
+
+if (logOut) {
+    logOut.addEventListener('click', redirect);
+}
 
 /*exibir avatar*/
-avatar.addEventListener('click', exibirAvatar);
-avatar.addEventListener('touchstart', exibirAvatar);
+if (avatar) {
+    avatar.addEventListener('click', exibirAvatar);
+    avatar.addEventListener('touchstart', exibirAvatar);
+}

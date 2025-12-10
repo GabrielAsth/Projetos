@@ -35,16 +35,18 @@
 			</button>
 			<nav id="nav">
 				<ul>
-					<li><a href="index.html">Início</a></li>
+					<li class="current"><a href="index.html">Início</a></li>
 					<li>
-						<a href="index.html#highlights">Projetos</a>
+						<a href="#highlights">Projetos</a>
 						<ul>
 							<li><a href="Gabflix.html">Gabflix</a></li>
-							<li><a href="#" class="coming-soon">Projeto 2 (Em Breve)</a></li>
+							<li><a href="https://bsx-b2b.vercel.app/">Landing Page B2B</a></li>
+							<li><a href="https://grupobsx.com.br/">Site institucional</a></li>
 							<li><a href="https://duplastico.com.br/">Duplastico</a></li>
+							<li><a href="#" class="coming-soon">Projeto 2 (Em Breve)</a></li>
 						</ul>
 					</li>
-					<li class="current"><a href="Sobre mim.html">Sobre Mim</a></li>
+					<li><a href="Sobre mim.html">Sobre Mim</a></li>
 					<li><a href="Aprendendo.html">Conhecimentos</a></li>
 					<li><a href="Futuro.html">Objetivos</a></li>
 				</ul>
@@ -67,7 +69,7 @@
 									<p>Desenvolvedor Web em constante evolução</p>
 								</header>
 								<a href="#" class="image featured">
-									<img src="images/pic01.jpg" alt="" />
+									<img src="images/pic01.jpeg" alt="" />
 								</a>
 								<p>
 									Olá! Sou Gabriel Asth, um desenvolvedor web apaixonado por criar experiências digitais únicas e funcionais. 
@@ -153,10 +155,14 @@
 							<form method="post" action="https://formspree.io/f/mkgjpygo">
 								<div class="row gtr-50">
 									<div class="col-6 col-12-small">
-										<input type="text" name="name" id="contact-name" placeholder="Nome" required />
+										<input type="text" name="name" id="contact-name" 
+										autocomplete="name"
+										placeholder="Nome" required />
 									</div>
 									<div class="col-6 col-12-small">
-										<input type="email" name="email" id="contact-email" placeholder="Email" required />
+										<input type="email" 
+										autocomplete="email"
+										name="email" id="contact-email" placeholder="Email" required />
 									</div>
 									<div class="col-12">
 										<textarea name="message" id="contact-message" placeholder="Mensagem" rows="4" required></textarea>

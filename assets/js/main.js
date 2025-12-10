@@ -5,8 +5,8 @@
 */
 
 // Import modules
-import navigationManager from './navigation.js';
-import animationManager from './animation.js';
+import './navigation.js';
+import animationManager from './animations.js';
 
 // Main App Class
 class App {
@@ -29,8 +29,7 @@ class App {
 	}
 
 	initAnimations() {
-		// Inicializar animações
-		animationManager.init();
+
 	}
 
 	setupEventListeners() {
@@ -47,12 +46,10 @@ class App {
 
 	handleResize() {
 		// Atualizar elementos responsivos
-		animationManager.updateResponsive();
 	}
 
 	handleScroll() {
 		// Atualizar animações baseadas em scroll
-		animationManager.updateScrollAnimations();
 	}
 }
 
