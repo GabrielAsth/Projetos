@@ -1977,6 +1977,59 @@ input, select, textarea {
 		margin-left: 7em;
 	}
 
+	/* --- Estilos para os Cards de Habilidade com Ícones --- */
+
+/* 1. Transforma o card em um container flexível */
+.skill-card {
+    display: flex;
+    align-items: flex-start; /* Alinha no topo */
+    background: #fff;        /* Fundo branco */
+    padding: 1.5em;          /* Espaçamento interno */
+    border-radius: 12px;     /* Bordas arredondadas */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05); /* Sombra suave */
+    border: 1px solid #eee;
+    transition: all 0.3s ease;
+}
+
+/* Efeito ao passar o mouse (opcional) */
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,123,255,0.15); /* Sombra azulada ao passar o mouse */
+    border-color: #a7d2ff;
+}
+
+/* 2. Estilo da caixinha do ícone */
+.skill-card .icon-box {
+    flex-shrink: 0; /* Impede o ícone de amassar */
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #007bff, #0056b3); /* Gradiente azul (cor do tema) */
+    color: white;
+    border-radius: 50%; /* Círculo perfeito */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1.5em; /* Espaço entre o ícone e o texto */
+    font-size: 1.6em; /* Tamanho do ícone dentro do círculo */
+}
+
+/* 3. Ajustes no texto */
+.skill-card .text-box {
+    flex-grow: 1;
+}
+
+/* Remove as margens antigas que causavam o problema anterior */
+.skill-card h3, 
+.skill-card p {
+    margin-left: 0 !important;
+    margin-bottom: 0.5em;
+}
+
+.skill-card p {
+    margin-bottom: 0; /* Remove margem do último item */
+    color: #666;      /* Cor do texto um pouco mais suave */
+}
+
 /* Wrapper */
 
 	.wrapper {
